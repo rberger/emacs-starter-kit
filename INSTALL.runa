@@ -1,0 +1,40 @@
+# My Fork
+
+This is Mudphone's RUNA fork of the Emacs Starter Kit (by Technomancy).
+
+  http://github.com/technomancy/emacs-starter-kit/
+
+# Installation
+
+1. Clone or fork this project.
+
+Forking is easier, as it will automatically create a github project for you (and you'll show up in the network graph).
+
+2. Create a .emacs.d link to this project.
+
+For example, if you forked and cloned the project as:
+
+  $ cd ~/work/emacs
+  $ git clone git://github.com/<your user name>/emacs-starter-kit.git
+
+If you already have a .emacs.d directory, you should rename it (unless you don't want it any more).
+
+Then, you can create your link like so:
+
+  $ cd ~/.
+  $ ln -s ~/work/emacs/emacs-starter-kit .emacs.d
+
+3) Refresh all submodules
+
+You must refresh all submodules and nested submodules:
+
+  $ cd ~/.emacs.d
+  $ git submodule init
+  $ git submodule update
+  $ git submodule foreach "git submodule init"
+  $ git submodule foreach "git submodule update"
+
+If the "foreach" command doesn't work for you, you probably need to upgrade your git to >= 1.6.4.
+
+  $ sudo port selfupdate
+  $ sudo port install git-core
