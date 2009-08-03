@@ -1,0 +1,9 @@
+[submodule "vendor/magit"]
+	path = vendor/magit
+	url = git://gitorious.org/magit/mainline.git
+[submodule "vendor/rinari"]
+	path = vendor/rinari
+	url = git://github.com/technomancy/rinari.git
+[submodule "vendor/rspec-mode"]
+	path = vendor/rspec-mode
+	url = git://github.com/pat-maddox/rspec-mode.el.git
