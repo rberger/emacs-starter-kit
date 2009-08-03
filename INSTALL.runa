@@ -38,3 +38,5 @@ If the "foreach" command doesn't work for you, you probably need to upgrade your
 
   $ sudo port selfupdate
   $ sudo port install git-core
+
+Happy hacking!!!
