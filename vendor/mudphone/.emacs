@@ -31,7 +31,7 @@
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/clj-utils/src/"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/clj-record/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/swarmiji/src/"))
-;(add-to-list 'extra-classpaths "~/.clojure/clojure-contrib.jar")
+(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
 (add-to-list 'extra-classpaths "/Users/koba/work/clojure/mudphone/")
 
 
