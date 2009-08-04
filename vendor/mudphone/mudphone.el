@@ -33,5 +33,8 @@
 (require 'textmate)
 (textmate-mode)
 
+;; Mac Settings for GNU Emacs
+(setq mac-command-modifier 'meta)
+
 ;; Runa Settings
 (load "~/.emacs.d/vendor/mudphone/runa.el")
