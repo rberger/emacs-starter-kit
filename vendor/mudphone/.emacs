@@ -8,7 +8,7 @@
 (require 'clojure-mode)
 
 ;; load path settings
-(setq *RUNA-ROOT* "~/work/runa")
+(setq *RUNA-ROOT* "/Users/koba/work/runa")
 (setq *FURTIVE-ROOT* (concat *RUNA-ROOT* "/furtive"))
 (setq extra-classpaths (directory-files "~/.clojure" t "\\.jar$"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/src/"))
@@ -31,7 +31,8 @@
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/clj-utils/src/"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/clj-record/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/swarmiji/src/"))
-(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
+;(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
+;(add-to-list 'extra-classpaths "/Users/koba/work/runa/ikouclojure/src/")
 (add-to-list 'extra-classpaths "/Users/koba/work/clojure/mudphone/")
 
 
@@ -75,7 +76,6 @@
  '(debug-on-error t)
  '(save-place t nil (saveplace))
  '(show-paren-mode t)
- '(transient-mark-mode t)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
 ;; Add Mudphone's custom settings:

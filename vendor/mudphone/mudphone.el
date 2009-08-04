@@ -34,7 +34,10 @@
 (textmate-mode)
 
 ;; Mac Settings for GNU Emacs
+(setq mac-option-key-is-meta nil)
+(setq mac-command-key-is-meta t)
 (setq mac-command-modifier 'meta)
+(setq mac-option-modifier nil)
 
 ;; Runa Settings
 (load "~/.emacs.d/vendor/mudphone/runa.el")
