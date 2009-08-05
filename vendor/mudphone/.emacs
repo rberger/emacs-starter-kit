@@ -8,9 +8,11 @@
 (require 'clojure-mode)
 
 ;; load path settings
-(setq *RUNA-ROOT* "/Users/koba/work/runa")
+(setq *USER-ROOT* "/Users/koba")
+(setq *WORK-ROOT* (concat *USER-ROOT* "/work"))
+(setq *RUNA-ROOT* (concat *WORK-ROOT* "/runa"))
 (setq *FURTIVE-ROOT* (concat *RUNA-ROOT* "/furtive"))
-(setq extra-classpaths (directory-files "~/.clojure" t "\\.jar$"))
+(setq extra-classpaths (directory-files (concat *USER-ROOT* "/.clojure") t "\\.jar$"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/src/"))
 
 (defun add-to-extra-classpath (classpath-entry)
@@ -31,23 +33,23 @@
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/clj-utils/src/"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/clj-record/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/swarmiji/src/"))
-;(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
-;(add-to-list 'extra-classpaths "/Users/koba/work/runa/ikouclojure/src/")
-(add-to-list 'extra-classpaths "/Users/koba/work/clojure/mudphone/")
+(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
+;; (add-to-list 'extra-classpaths "/Users/koba/work/runa/ikouclojure/src/")
+(add-to-list 'extra-classpaths (concat *WORK-ROOT* "/clojure/mudphone/"))
 
 
 ;; swank-clojure
-(add-to-list 'load-path "~/work/clojure/swank-clojure")
+(add-to-list 'load-path (concat *WORK-ROOT* "/clojure/swank-clojure"))
 (require 'swank-clojure-autoload)
 (swank-clojure-config
- (setq swank-clojure-jar-path "~/.clojure/clojure.jar")
+ (setq swank-clojure-jar-path (concat *USER-ROOT* "/.clojure/clojure.jar"))
  (setq swank-clojure-extra-classpaths extra-classpaths))
 
 ;; slime
 (eval-after-load "slime"
   '(progn (slime-setup '(slime-repl))))
 
-(add-to-list 'load-path "~/work/clojure/slime")
+(add-to-list 'load-path (concat *WORK-ROOT* "/clojure/slime"))
 (require 'slime)
 (slime-setup)
 ;(custom-set-variables
@@ -73,12 +75,11 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(blink-cursor-mode t)
  '(debug-on-error t)
  '(save-place t nil (saveplace))
  '(show-paren-mode t)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
 ;; Add Mudphone's custom settings:
-(load "~/.emacs.d/vendor/mudphone/mudphone.el")
+(load (concat *USER-ROOT* "/.emacs.d/vendor/mudphone/mudphone.el"))
 
