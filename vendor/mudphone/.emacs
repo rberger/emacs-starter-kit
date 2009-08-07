@@ -8,7 +8,7 @@
 (require 'clojure-mode)
 
 ;; load path settings
-(setq *USER-ROOT* "/Users/koba")
+(setq *USER-ROOT* (getenv "HOME"))
 (setq *WORK-ROOT* (concat *USER-ROOT* "/work"))
 (setq *RUNA-ROOT* (concat *WORK-ROOT* "/runa"))
 (setq *FURTIVE-ROOT* (concat *RUNA-ROOT* "/furtive"))
@@ -29,9 +29,12 @@
        (cddr (directory-files (concat *FURTIVE-ROOT* "/lib/clojure")))))
 (mapcar 'add-to-extra-classpath CLOJURE-MODULES)
 
-(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/webbing/src/"))
-(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/clj-utils/src/"))
+(add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/capjure/src/"))
+(add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/capjure/classes/"))
+(add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/clj-utils/src/"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/clj-record/"))
+(add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/webbing/src/"))
+(add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/postal/src/clj/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/swarmiji/src/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
 ;; (add-to-list 'extra-classpaths "/Users/koba/work/runa/ikouclojure/src/")
