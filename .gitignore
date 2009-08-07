@@ -6,3 +6,4 @@ config/config.clj
 scripts/furtive
 logs/*
 logs
+vendor/mudphone/nxhtml/etc/schema/xhtml-loader.rnc
