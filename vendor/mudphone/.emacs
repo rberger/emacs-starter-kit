@@ -82,6 +82,7 @@
  '(debug-on-error t)
  '(save-place t nil (saveplace))
  '(show-paren-mode t)
+ '(tab-width 2)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
 ;; Add Mudphone's custom settings:
