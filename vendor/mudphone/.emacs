@@ -80,8 +80,10 @@
   ;; If there is more than one, they won't work right.
  '(blink-cursor-mode t)
  '(debug-on-error t)
+ '(indent-tabs-mode nil)
  '(save-place t nil (saveplace))
  '(show-paren-mode t)
+ '(standard-indent 2)
  '(tab-width 2)
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
