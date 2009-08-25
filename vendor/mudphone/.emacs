@@ -89,4 +89,3 @@
 
 ;; Add Mudphone's custom settings:
 (load (concat *USER-ROOT* "/.emacs.d/vendor/mudphone/mudphone.el"))
-
