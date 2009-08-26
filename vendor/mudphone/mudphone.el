@@ -34,6 +34,9 @@
 (require 'textmate)
 (textmate-mode)
 
+;; Tramp
+(setq tramp-default-method "ssh")
+
 ;; Custom Keybindings
 (load "~/.emacs.d/vendor/mudphone/custom_keybindings.el")
 
