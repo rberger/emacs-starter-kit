@@ -12,14 +12,19 @@
 (setq *WORK-ROOT* (concat *USER-ROOT* "/work"))
 (setq *RUNA-ROOT* (concat *WORK-ROOT* "/runa"))
 (setq *FURTIVE-ROOT* (concat *RUNA-ROOT* "/furtive"))
+(setq *SWARMIJI-ROOT* (concat *RUNA-ROOT* "/swarmiji"))
+
 (setq extra-classpaths (directory-files (concat *USER-ROOT* "/.clojure") t "\\.jar$"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/src/"))
 
 (defun add-to-extra-classpath (classpath-entry)
   (add-to-list 'extra-classpaths classpath-entry))
 
-(setq JAVA-JARS
+(setq FURTIVE-JAVA-JARS
       (directory-files (concat *FURTIVE-ROOT* "/lib/java") t "\\.jar$"))
+(setq SWARMIJI-JAVA-JARS
+      (directory-files (concat *SWARMIJI-ROOT* "/lib/java") t "\\.jar$"))
+(setq JAVA-JARS (append FURTIVE-JAVA-JARS SWARMIJI-JAVA-JARS))
 (mapcar 'add-to-extra-classpath JAVA-JARS)
 
 (setq CLOJURE-MODULES
@@ -89,4 +94,3 @@
 
 ;; Add Mudphone's custom settings:
 (load (concat *USER-ROOT* "/.emacs.d/vendor/mudphone/mudphone.el"))
-
