@@ -128,15 +128,15 @@
   ;; Provide the feature here to avoid loading looping on error.
   (provide 'nxhtml-autostart)
 
-  (if (< emacs-major-version 23)
-      (load (expand-file-name "autostart22" nxhtml-install-dir))
-    ;; Check that the nxml-mode included with Emacs is used. There
-    ;; has been some problems on Debian with this.
-    (let ((nxml-mode-file (locate-library "nxml-mode"))
-          (help-file      (locate-library "help")))
-      (unless (string= (expand-file-name ".." help-file)
-                       (expand-file-name "../.." nxml-mode-file))
-        (error "Wrong nxml-mode=%s used, please use the one that comes with Emacs" nxml-mode-file))))
+  ;(if (< emacs-major-version 23)
+  ;    (load (expand-file-name "autostart22" nxhtml-install-dir))
+  ;  ;; Check that the nxml-mode included with Emacs is used. There
+  ;  ;; has been some problems on Debian with this.
+  ;  (let ((nxml-mode-file (locate-library "nxml-mode"))
+  ;        (help-file      (locate-library "help")))
+  ;    (unless (string= (expand-file-name ".." help-file)
+  ;                     (expand-file-name "../.." nxml-mode-file))
+  ;      (error "Wrong nxml-mode=%s used, please use the one that comes with Emacs" nxml-mode-file))))
 
   (let* ((util-dir (file-name-as-directory (expand-file-name "util" nxhtml-install-dir)))
          (related-dir (file-name-as-directory (expand-file-name "related" nxhtml-install-dir)))

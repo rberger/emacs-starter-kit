@@ -30,7 +30,7 @@
 (setq windmove-wrap-around t)
 
 ;; Textmate minor mode
-;; (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 (require 'textmate)
 (textmate-mode)
 
