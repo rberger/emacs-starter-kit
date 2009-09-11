@@ -1,5 +1,7 @@
 ;; load path settings
 (setq *USER-ROOT* (getenv "HOME"))
+(setq *PERSONAL-ID* "mudphone")
+(setq *PERSONAL-VENDOR* (concat *USER-ROOT* "/.emacs.d/vendor/" *PERSONAL-ID*))
 (setq *WORK-ROOT* (concat *USER-ROOT* "/work"))
 (setq *CLOJURE-ROOT* (concat *WORK-ROOT* "/clojure"))
 (setq *RUNA-ROOT* (concat *WORK-ROOT* "/runa"))
@@ -37,10 +39,7 @@
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/webbing/src/"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/lib/clojure/postal/src/clj/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/swarmiji/src/"))
-(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
-(add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/norvig_ai/src/"))
-(add-to-list 'extra-classpaths (concat *CLOJURE-ROOT* "/mudphone/"))
-
+(load (concat *PERSONAL-VENDOR* "/" *PERSONAL-ID* "_extra_classpaths.el"))
 
 ;; swank-clojure
 (add-to-list 'load-path (concat *CLOJURE-ROOT* "/swank-clojure"))
@@ -53,7 +52,7 @@
 (eval-after-load "slime"
   '(progn (slime-setup '(slime-repl))))
 
-(add-to-list 'load-path (concat *WORK-ROOT* "/clojure/slime"))
+(add-to-list 'load-path (concat *CLOJURE-ROOT* "/slime"))
 (require 'slime)
 (slime-setup)
 ;(custom-set-variables
@@ -89,4 +88,4 @@
  '(uniquify-buffer-name-style (quote forward) nil (uniquify)))
 
 ;; Add Mudphone's custom settings:
-(load (concat *USER-ROOT* "/.emacs.d/vendor/mudphone/mudphone.el"))
+(load (concat *PERSONAL-VENDOR* "/" *PERSONAL-ID* ".el"))
