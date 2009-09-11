@@ -1,18 +1,14 @@
-;; M-x slime   ;; to start slime
-;; C-c C-z     ;; to run clojure buffer in inferior-lisp
-;; C-c C-e     ;; to run last line in inferior-lisp
-;; (or C-x C-e)
-
-;; clojure-mode
-(add-to-list 'load-path "~/work/clojure/clojure-mode")
-(require 'clojure-mode)
-
 ;; load path settings
 (setq *USER-ROOT* (getenv "HOME"))
 (setq *WORK-ROOT* (concat *USER-ROOT* "/work"))
+(setq *CLOJURE-ROOT* (concat *WORK-ROOT* "/clojure"))
 (setq *RUNA-ROOT* (concat *WORK-ROOT* "/runa"))
 (setq *FURTIVE-ROOT* (concat *RUNA-ROOT* "/furtive"))
 (setq *SWARMIJI-ROOT* (concat *RUNA-ROOT* "/swarmiji"))
+
+;; clojure-mode
+(add-to-list 'load-path (concat *CLOJURE-ROOT* "/clojure-mode"))
+(require 'clojure-mode)
 
 (setq extra-classpaths (directory-files (concat *USER-ROOT* "/.clojure") t "\\.jar$"))
 (add-to-list 'extra-classpaths (concat *FURTIVE-ROOT* "/src/"))
@@ -43,14 +39,14 @@
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/swarmiji/src/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/ikouclojure/src/"))
 (add-to-list 'extra-classpaths (concat *RUNA-ROOT* "/norvig_ai/src/"))
-(add-to-list 'extra-classpaths (concat *WORK-ROOT* "/clojure/mudphone/"))
+(add-to-list 'extra-classpaths (concat *CLOJURE-ROOT* "/mudphone/"))
 
 
 ;; swank-clojure
-(add-to-list 'load-path (concat *WORK-ROOT* "/clojure/swank-clojure"))
+(add-to-list 'load-path (concat *CLOJURE-ROOT* "/swank-clojure"))
 (require 'swank-clojure-autoload)
 (swank-clojure-config
- (setq swank-clojure-jar-path (concat *USER-ROOT* "/.clojure/clojure.jar"))
+ (setq swank-clojure-jar-path (concat *FURTIVE-ROOT* "/lib/java/clojure.jar"))
  (setq swank-clojure-extra-classpaths extra-classpaths))
 
 ;; slime
