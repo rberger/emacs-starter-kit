@@ -39,7 +39,9 @@
 
 ;; IRC
 (require 'erc)
-(load "~/.emacs.d/vendor/mudphone/ercrc.el")
+(if (file-readable-p "~/.emacs/.erc-auth")
+    (load "~/.emacs.d/vendor/mudphone/ercrc.el"))
+
 
 ;; Custom Keybindings
 (load "~/.emacs.d/vendor/mudphone/custom_keybindings.el")

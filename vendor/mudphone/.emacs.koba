@@ -23,7 +23,10 @@
 ;; swank-clojure
 ;;----------------------------------------
 ;; basic swank classpath setup
-(setq extra-classpaths (directory-files (concat *USER-ROOT* "/.clojure") t "\\.jar$"))
+(setq *DOT-CLOJURE-PATH* "~/.clojure")
+(if (file-accessible-directory-p *DOT-CLOJURE-PATH*)
+    (setq extra-classpaths (directory-files *DOT-CLOJURE-PATH* t "\\.jar$"))
+  (setq extra-classpaths '()))
 (defun add-to-extra-classpath (entry)
   (add-to-list 'extra-classpaths entry))
 
