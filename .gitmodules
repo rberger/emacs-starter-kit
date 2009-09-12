@@ -7,12 +7,12 @@
 [submodule "vendor/rspec-mode"]
 	path = vendor/rspec-mode
 	url = git://github.com/pat-maddox/rspec-mode.el.git
-[submodule "vendor/mudphone/repos/clojure-mode"]
-	path = vendor/mudphone/repos/clojure-mode
+[submodule "vendor/clojure-mode"]
+	path = vendor/clojure-mode
 	url = git://github.com/jochu/clojure-mode.git
-[submodule "vendor/mudphone/repos/swank-clojure"]
-	path = vendor/mudphone/repos/swank-clojure
+[submodule "vendor/swank-clojure"]
+	path = vendor/swank-clojure
 	url = git://github.com/jochu/swank-clojure.git
-[submodule "vendor/mudphone/repos/slime"]
-	path = vendor/mudphone/repos/slime
+[submodule "vendor/slime"]
+	path = vendor/slime
 	url = git://git.boinkor.net/slime.git
