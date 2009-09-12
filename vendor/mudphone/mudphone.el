@@ -39,6 +39,3 @@
 
 ;; Custom Keybindings
 (load "~/.emacs.d/vendor/mudphone/custom_keybindings.el")
-
-;; Runa Settings
-(load "~/.emacs.d/vendor/mudphone/runa.el")

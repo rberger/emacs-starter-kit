@@ -3,10 +3,9 @@
 (setq *WORK-ROOT* (concat *USER-ROOT* "/work"))
 (setq *VENDOR-ROOT* (concat *USER-ROOT* "/.emacs.d/vendor"))
 (setq *PERSONAL-VENDOR* (concat *VENDOR-ROOT* "/mudphone"))
-(setq *CLOJURE-ROOT* (concat *PERSONAL-VENDOR* "/repos"))
 
 ;; clojure-mode
-(add-to-list 'load-path (concat *CLOJURE-ROOT* "/clojure-mode"))
+(add-to-list 'load-path (concat *VENDOR-ROOT* "/clojure-mode"))
 (require 'clojure-mode)
 
 ;; basic swank classpath setup
@@ -20,7 +19,7 @@
 (load (concat *PERSONAL-VENDOR* "/extra_classpaths.el"))
 
 ;; swank-clojure
-(add-to-list 'load-path (concat *CLOJURE-ROOT* "/swank-clojure"))
+(add-to-list 'load-path (concat *VENDOR-ROOT* "/swank-clojure"))
 (require 'swank-clojure-autoload)
 (swank-clojure-config
  (setq swank-clojure-jar-path (concat *FURTIVE-ROOT* "/lib/java/clojure.jar"))
@@ -29,7 +28,7 @@
 ;; slime
 (eval-after-load "slime"
   '(progn (slime-setup '(slime-repl))))
-(add-to-list 'load-path (concat *CLOJURE-ROOT* "/slime"))
+(add-to-list 'load-path (concat *VENDOR-ROOT* "/slime"))
 (require 'slime)
 (slime-setup)
 
@@ -50,7 +49,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(ido-mode (quote both) nil (ido)))
+ '(ido-mode (quote both) nil (ido))
  '(blink-cursor-mode t)
  '(debug-on-error t)
  '(indent-tabs-mode nil)
