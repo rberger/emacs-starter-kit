@@ -3,7 +3,7 @@
 (setq *PERSONAL-ID* "mudphone")
 (setq *PERSONAL-VENDOR* (concat *USER-ROOT* "/.emacs.d/vendor/" *PERSONAL-ID*))
 (setq *WORK-ROOT* (concat *USER-ROOT* "/work"))
-(setq *CLOJURE-ROOT* (concat *WORK-ROOT* "/clojure"))
+(setq *CLOJURE-ROOT* (concat *PERSONAL-VENDOR* "/repos"))
 (setq *RUNA-ROOT* (concat *WORK-ROOT* "/runa"))
 (setq *FURTIVE-ROOT* (concat *RUNA-ROOT* "/furtive"))
 (setq *SWARMIJI-ROOT* (concat *RUNA-ROOT* "/swarmiji"))
