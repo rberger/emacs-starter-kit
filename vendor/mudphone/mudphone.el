@@ -37,5 +37,9 @@
 ;; Tramp
 (setq tramp-default-method "ssh")
 
+;; IRC
+(require 'erc)
+(load "~/.emacs.d/vendor/mudphone/ercrc.el")
+
 ;; Custom Keybindings
 (load "~/.emacs.d/vendor/mudphone/custom_keybindings.el")
