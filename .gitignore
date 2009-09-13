@@ -3,6 +3,7 @@ koba.el
 \.\#*
 \#*
 .DS_Store
+.authinfo
 .classpath
 .erc-auth
 .newsrc-dribble

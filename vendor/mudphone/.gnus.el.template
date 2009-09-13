@@ -1,0 +1,22 @@
+(setq gnus-select-method '(nnimap "gmail"
+                                   (nnimap-stream ssl)
+                                   (nnimap-address "imap.gmail.com")
+                                   (nnimap-authinfo-file "~/.emacs.d/.authinfo")
+                                   (nnimap-expunge-on-close always)
+                                   (nnimap-nov-is-evil t)
+                                   (nnir-search-engine imap)))
+
+(setq message-send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+      smtpmail-auth-credentials '(("smtp.gmail.com" 587 "YOUR_EMAIL@gmail.com" nil))
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587
+      smtpmail-local-domain "YOUR_DOMAIN.com")
+
+;; Don't read news...
+(setq gnus-nntp-server nil
+      gnus-read-active-file nil
+      gnus-save-newsrc-file nil
+      gnus-read-newsrc-file nil
+      gnus-check-new-newsgroups nil)
