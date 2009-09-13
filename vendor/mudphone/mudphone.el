@@ -39,7 +39,7 @@
 
 ;; IRC
 (require 'erc)
-(if (file-readable-p "~/.emacs/.erc-auth")
+(if (file-readable-p "~/.emacs.d/.erc-auth")
     (load "~/.emacs.d/vendor/mudphone/ercrc.el"))
 
 
