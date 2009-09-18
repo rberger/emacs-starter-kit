@@ -29,6 +29,9 @@
 (windmove-default-keybindings)
 (setq windmove-wrap-around t)
 
+;; ScrollBars
+(scroll-bar-mode)
+
 ;; Textmate minor mode
 (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 (require 'textmate)
