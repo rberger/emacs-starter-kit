@@ -11,6 +11,7 @@
 ;; 1) Launch Gnus with: M-x gnus
 ;; 2) Here's a cheatsheet:
 ;; - http://codesnippets.joyent.com/posts/show/367
+;; - http://www.stat.ufl.edu/~presnell/Links/gnus-brief.txt
 
 (setq user-mail-address "YOUR_EMAIL@gmail.com") 
 (setq user-full-name "YOUR_NAME")
