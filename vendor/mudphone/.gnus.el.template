@@ -9,11 +9,16 @@
 ;;
 ;; Helpful Gnus stuff:
 ;; 1) Launch Gnus with: M-x gnus
-;; 2) Here's a cheatsheet:
+;; 2) Here some helpful cheatsheets:
 ;; - http://codesnippets.joyent.com/posts/show/367
+;; - http://dallaslynn.com/refcards/refcard.pdf
+;;
+;; To subscribe to your INBOX:
+;; 1) from Gnus, hit S-s
+;; 2) enter: nnimap+imap.gmail.com:INBOX
 
-(setq user-mail-address "YOUR_EMAIL@gmail.com") 
-(setq user-full-name "YOUR_NAME")
+(setq user-mail-address "kyleoba@gmail.com") 
+(setq user-full-name "Kyle Oba")
 
 (setq gnus-select-method '(nnimap "gmail"
                                    (nnimap-stream ssl)
