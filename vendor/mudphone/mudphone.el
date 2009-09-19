@@ -45,5 +45,8 @@
 (if (file-readable-p "~/.emacs.d/.erc-auth")
     (load "~/.emacs.d/vendor/mudphone/ercrc.el"))
 
+;; Show Parens
+(show-paren-mode)
+
 ;; Custom Keybindings
 (load "~/.emacs.d/vendor/mudphone/custom_keybindings.el")
