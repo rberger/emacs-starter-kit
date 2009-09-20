@@ -4,6 +4,9 @@
 (setq mac-command-modifier 'meta)
 (setq mac-option-modifier nil)
 
+;; Slime
+(define-key global-map [(control z)] 'slime-eval-buffer)
+
 ;; Toggle truncating lines
 (define-key global-map [(control \;)(m)(t)] 'toggle-truncate-lines)
 
