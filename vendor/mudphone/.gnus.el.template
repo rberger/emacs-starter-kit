@@ -1,0 +1,52 @@
+;; To use IMAP Gmail with Gnus:
+;; 1) Copy this file to ~/.gnus.el
+;; 2) Update ~/.gnus.el with YOUR_EMAIL and YOUR_NAME
+;; 3) Copy .authinfo.template to ~/.emacs.d/.authinfo
+;; 4) Update ~/.emacs.d/.authinfo with your email address and password
+;; 5) If you want to send emails, make sure you have:
+;;   a) gnutls installed via macports if you're on a mac (see starttls-gnutls-program below)
+;;   b) or, starttls or gnutls installed some other way
+;;
+;; Helpful Gnus stuff:
+;; 1) Launch Gnus with: M-x gnus
+;; 2) Here some helpful cheatsheets:
+;; - http://codesnippets.joyent.com/posts/show/367
+;; - http://www.stat.ufl.edu/~presnell/Links/gnus-brief.txt
+;; - http://dallaslynn.com/refcards/refcard.pdf
+;;
+;; To subscribe to your INBOX:
+;; 1) from Gnus, hit S-s
+;; 2) enter: nnimap+imap.gmail.com:INBOX
+
+(setq user-mail-address "YOUR_EMAIL@gmail.com") 
+(setq user-full-name "YOUR_NAME YOUR_LAST_NAME")
+
+(setq gnus-select-method '(nnimap "gmail"
+                                   (nnimap-stream ssl)
+                                   (nnimap-address "imap.gmail.com")
+                                   (nnimap-authinfo-file "~/.emacs.d/.authinfo")
+                                   (nnimap-expunge-on-close always)
+                                   (nnimap-nov-is-evil t)
+                                   (nnir-search-engine imap)))
+
+(setq starttls-gnutls-program "/opt/local/bin/gnutls-cli")
+(setq starttls-use-gnutls t)
+(setq send-mail-function 'smtpmail-send-it
+      message-send-mail-function 'smtpmail-send-it
+      smtpmail-starttls-credentials
+      '(("smtp.gmail.com" 587 nil nil))
+      smtpmail-auth-credentials
+      (expand-file-name "~/.emacs.d/.authinfo")
+      smtpmail-default-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-server "smtp.gmail.com"
+      smtpmail-smtp-service 587
+      smtpmail-debug-info t
+      smtpmail-local-domain "gmail.com")
+(require 'smtpmail)
+
+;; Don't read news...
+(setq gnus-nntp-server nil
+      gnus-read-active-file nil
+      gnus-save-newsrc-file nil
+      gnus-read-newsrc-file nil
+      gnus-check-new-newsgroups nil)

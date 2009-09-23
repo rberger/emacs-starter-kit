@@ -1,6 +1,11 @@
 ;; Add to load-path:
 (add-to-list 'load-path "~/.emacs.d/vendor/mudphone")
 
+;; Maxframe - Maximizes the Emacs frame on start.
+(load "~/.emacs.d/vendor/mudphone/maxframe.el")
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
+
 ;; Yet Another Snippet Plugin (yasnippet):
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 (require 'yasnippet) ;; not yasnippet-bundle
@@ -20,22 +25,28 @@
 (load "~/.emacs.d/vendor/magit/magit.el")
 (require 'magit)
 
-;; Maxframe - Maximizes the Emacs frame on start.
-(load "~/.emacs.d/vendor/mudphone/maxframe.el")
-(require 'maxframe)
-(add-hook 'window-setup-hook 'maximize-frame t)
-
 ;; Windmove - Allows <shift>-<arrow key> window changing.
 (windmove-default-keybindings)
 (setq windmove-wrap-around t)
 
+;; ScrollBars
+(scroll-bar-mode)
+
 ;; Textmate minor mode
-;; (add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
+(add-to-list 'load-path "~/.emacs.d/vendor/textmate.el")
 (require 'textmate)
 (textmate-mode)
 
+;; Tramp
+(setq tramp-default-method "ssh")
+
+;; IRC
+(require 'erc)
+(if (file-readable-p "~/.emacs.d/.erc-auth")
+    (load "~/.emacs.d/vendor/mudphone/ercrc.el"))
+
+;; Show Parens
+(show-paren-mode)
+
 ;; Custom Keybindings
 (load "~/.emacs.d/vendor/mudphone/custom_keybindings.el")
-
-;; Runa Settings
-(load "~/.emacs.d/vendor/mudphone/runa.el")

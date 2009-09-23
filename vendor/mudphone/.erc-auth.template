@@ -1,0 +1,18 @@
+;; This is the authorization data used by ERC (IRC client for Emacs).
+;; DO NOT check this file into Git.
+;;
+;; 1) move to .emacs.d and rename to .erc-auth
+;; 2) change settings below:
+;;     YOUR_NICKNAME
+;;     YOUR_FULLNAME
+;;     YOUR_PASSWORD - you must register your nick with the NickServ to set this password
+
+;;  Example server and channel array of lists:
+;; (setq freenode-channels-alist
+;;   '((".*\\.freenode.net" "#emacs" "#gnu" "#gcc" "#modest" "#maemo")
+;;     (".*\\.gimp.org" "#unix" "#gtk+")))
+
+(setq freenode-channels-alist '((".*\\.freenode.net" "#runa-dev" "#clojure" "#hbase")))
+(setq freenode-nick "YOUR_NICKNAME")
+(setq freenode-full-name "YOUR_FULLNAME")
+(setq freenode-pass "YOUR_PASSWORD")

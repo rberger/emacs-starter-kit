@@ -1,0 +1,2 @@
+machine imap.gmail.com login username@gmail.com password secret port imap
+machine smtp.gmail.com login username@gmail.com password secret
