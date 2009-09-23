@@ -13,10 +13,13 @@
 ;; - http://codesnippets.joyent.com/posts/show/367
 ;; - http://www.stat.ufl.edu/~presnell/Links/gnus-brief.txt
 ;; - http://dallaslynn.com/refcards/refcard.pdf
+;; - http://jfm3-repl.blogspot.com/2007/12/emacs-tricks-7-use-gnus-for-email.html
 ;;
 ;; To subscribe to your INBOX:
 ;; 1) from Gnus, hit S-s
 ;; 2) enter: nnimap+imap.gmail.com:INBOX
+;;
+;; Enjoy!
 
 (setq user-mail-address "YOUR_EMAIL@gmail.com") 
 (setq user-full-name "YOUR_NAME YOUR_LAST_NAME")
