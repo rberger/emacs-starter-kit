@@ -30,17 +30,18 @@
 (setq windmove-wrap-around t)
 
 ;; Conditional by Emacs Version
-(cond ((>= emacs-major-version 23)
-       (scroll-bar-mode))
-      ((defun x-cut-buffer-or-selection-value ())))
+(if (>= emacs-major-version 23)
+    (progn
+      (scroll-bar-mode)
+      (setq tramp-default-method "ssh"))
+  (defun x-cut-buffer-or-selection-value ()))
 
-;; Conditional by Emacs Version
-;; (cond ((string-match "Emacs 23" (emacs-version))
-;;        ;; If using Emacs 23...
-;;        ;;   Turn on scroll bars
-;;        (scroll-bar-mode))
-;;       ;;  If not using Emacs 23:
-;;       ((defun x-cut-buffer-or-selection-value ())))
+;; (if ((>= emacs-major-version 23)
+;;        (progn
+;;          (scroll-bar-mode)
+;;          (setq tramp-default-method "ssh")))
+;;       (defun x-cut-buffer-or-selection-value ()))
+
 
 ;; Textmate minor mode
 (add-to-list 'load-path (concat *VENDOR-ROOT* "/textmate.el"))
@@ -48,7 +49,7 @@
 (textmate-mode)
 
 ;; Tramp
-(setq tramp-default-method "ssh")
+;;(setq tramp-default-method "ssh")
 
 ;; IRC
 (require 'erc)

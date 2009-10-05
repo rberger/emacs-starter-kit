@@ -25,4 +25,5 @@
 (add-to-extra-classpath (concat *FURTIVE-ROOT* "/lib/clojure/clj-record/"))
 (add-to-extra-classpath (concat *FURTIVE-ROOT* "/lib/clojure/webbing/src/"))
 (add-to-extra-classpath (concat *FURTIVE-ROOT* "/lib/clojure/postal/src/clj/"))
+(add-to-extra-classpath (concat *FURTIVE-ROOT* "/lib/clojure/redis-clojure/src/"))
 (add-to-extra-classpath (concat *RUNA-ROOT* "/swarmiji/src/"))
