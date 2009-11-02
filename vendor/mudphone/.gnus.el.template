@@ -8,8 +8,9 @@
 ;;   b) or, starttls or gnutls installed some other way
 ;;
 ;; Helpful Gnus stuff:
-;; 1) Launch Gnus with: M-x gnus
+;; 1) Launch Gnus with: M-x gnus, or C-c g
 ;; 2) Here some helpful cheatsheets:
+;; - http://www.emacswiki.org/emacs/GnusGmail
 ;; - http://codesnippets.joyent.com/posts/show/367
 ;; - http://www.stat.ufl.edu/~presnell/Links/gnus-brief.txt
 ;; - http://dallaslynn.com/refcards/refcard.pdf
