@@ -56,6 +56,9 @@
 (if (file-readable-p "~/.emacs.d/.erc-auth")
     (load (concat *VENDOR-ROOT* "/mudphone/ercrc.el")))
 
+;; EShell
+(load (concat *VENDOR-ROOT* "/mudphone/eshell-customizations.el"))
+
 ;; Show Parens
 (show-paren-mode)
 
