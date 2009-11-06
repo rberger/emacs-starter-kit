@@ -8,6 +8,9 @@
 (setenv "FURTIVE_ENV" "development")
 (setenv "SWARMIJI_HOME" (concat (getenv "HOME") "/work/runa/swarmiji"))
 (setenv "SWARMIJI_ENV" "development")
+(setenv "SUMMARIZER_NS" "sphinx")
+
+(setenv "HBASE_RUNNER_HOME" (concat (getenv "HOME") "/work/clojure/hbase-runner"))
 
 (setq eshell-prompt-function
   (lambda ()
