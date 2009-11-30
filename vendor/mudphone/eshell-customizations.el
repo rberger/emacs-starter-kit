@@ -22,6 +22,8 @@
             "\n"
       (if (= (user-uid) 0) "# " "$ "))))
 
+(setq eshell-prompt-regexp "^[^#$\n]*[#$] ")
+
 (defun eshell/branch ()
   "Return the current git branch, if applicable."
   (let ((branch (concat "" (shell-command-to-string "git branch 2>/dev/null"))))
