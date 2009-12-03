@@ -4,6 +4,8 @@
 (setenv "MUDPHONE_BIN" (concat (getenv "MUDPHONE_DIR") "/bin"))
 (setenv "MUDPHONE_CONFIG" (concat (getenv "MUDPHONE_DIR") "/config"))
 
+(setenv "HBASE_RUNNER_HOME" (concat (getenv "HOME") "/work/clojure/hbase-runner"))
+
 (setenv "FURTIVE_HOME" (concat (getenv "HOME") "/work/runa/furtive"))
 (setenv "FURTIVE_ENV" "development")
 (setenv "SWARMIJI_HOME" (concat (getenv "HOME") "/work/runa/swarmiji"))
