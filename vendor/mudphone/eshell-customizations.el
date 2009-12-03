@@ -10,6 +10,9 @@
 (setenv "FURTIVE_ENV" "development")
 (setenv "SWARMIJI_HOME" (concat (getenv "HOME") "/work/runa/swarmiji"))
 (setenv "SWARMIJI_ENV" "development")
+(setenv "SUMMARIZER_NS" "sphinx")
+
+(setenv "HBASE_RUNNER_HOME" (concat (getenv "HOME") "/work/clojure/hbase-runner"))
 
 (setq eshell-prompt-function
   (lambda ()
@@ -20,6 +23,8 @@
             (eshell/branch)
             "\n"
       (if (= (user-uid) 0) "# " "$ "))))
+
+(setq eshell-prompt-regexp "^[^#$\n]*[#$] ")
 
 (defun eshell/branch ()
   "Return the current git branch, if applicable."
