@@ -36,20 +36,14 @@
       (setq tramp-default-method "ssh"))
   (defun x-cut-buffer-or-selection-value ()))
 
-;; (if ((>= emacs-major-version 23)
-;;        (progn
-;;          (scroll-bar-mode)
-;;          (setq tramp-default-method "ssh")))
-;;       (defun x-cut-buffer-or-selection-value ()))
-
-
 ;; Textmate minor mode
 (add-to-list 'load-path (concat *VENDOR-ROOT* "/textmate.el"))
 (require 'textmate)
 (textmate-mode)
 
-;; Tramp
-;;(setq tramp-default-method "ssh")
+;; Paredit
+;; enable paredit in slime repl
+(add-hook 'slime-repl-mode-hook (lambda () (paredit-mode +1)))
 
 ;; IRC
 (require 'erc)
