@@ -16,8 +16,8 @@
 ;;----------------------------------------
 ;; clojure-mode
 ;;----------------------------------------
-(add-to-list 'load-path (concat *VENDOR-ROOT* "/clojure-mode"))
-(require 'clojure-mode)
+;; (add-to-list 'load-path (concat *VENDOR-ROOT* "/clojure-mode"))
+;; (require 'clojure-mode)
 
 ;;----------------------------------------
 ;; swank-clojure
@@ -36,7 +36,8 @@
 (if (boundp '*EXTRA-SWANK-CLASSPATH-FILE-PATH*)
     (load *EXTRA-SWANK-CLASSPATH-FILE-PATH*))
 
-;; swank-clojure
+;; swank-clojure --
+;; KEEP THIS until you properly configure Swank-Clojure ... :{
 (add-to-list 'load-path (concat *VENDOR-ROOT* "/swank-clojure"))
 (require 'swank-clojure-autoload)
 (swank-clojure-config
@@ -44,14 +45,15 @@
      (setq swank-clojure-jar-path *SWANK-CLOJURE-JAR-PATH*))
  (setq swank-clojure-extra-classpaths extra-classpaths))
 
+
 ;;----------------------------------------
 ;; slime
 ;;----------------------------------------
-(eval-after-load "slime"
-  '(progn (slime-setup '(slime-repl))))
-(add-to-list 'load-path (concat *VENDOR-ROOT* "/slime"))
-(require 'slime)
-(slime-setup)
+;;(eval-after-load "slime"
+;;  '(progn (slime-setup '(slime-repl))))
+;;(add-to-list 'load-path (concat *VENDOR-ROOT* "/slime"))
+;;(require 'slime)
+;;(slime-setup)
 
 ;;----------------------------------------
 ;; other

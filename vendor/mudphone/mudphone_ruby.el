@@ -12,8 +12,8 @@
 (set-face-foreground 'ido-subdir "blue3")
 
 ;; Rinari
-(add-to-list 'load-path "~/.emacs.d/vendor/rinari")
-(require 'rinari)
+;; (add-to-list 'load-path "~/.emacs.d/vendor/rinari")
+;; (require 'rinari)
 
 ;; nxml (HTML ERB template support)
 ;(load "~/.emacs.d/vendor/nxhtml/autostart.el")
