@@ -12,7 +12,7 @@
 ;; 2) Here some helpful cheatsheets:
 ;; - http://www.emacswiki.org/emacs/GnusGmail
 ;; - http://codesnippets.joyent.com/posts/show/367
-;; - http://www.stat.ufl.edu/~presnell/Links/gnus-brief.txt
+;; - http://www.stat.ufl.edu/~presnell/Links/gnus-brief.org
 ;; - http://dallaslynn.com/refcards/refcard.pdf
 ;; - http://jfm3-repl.blogspot.com/2007/12/emacs-tricks-7-use-gnus-for-email.html
 ;;
@@ -20,6 +20,32 @@
 ;; 1) from Gnus, hit S-s
 ;; 2) enter: nnimap+imap.gmail.com:INBOX
 ;;
+;; Groups Buffer Commands:
+;; RET      - Open (unread only)
+;; C-u RET  - Open (read as well)
+;;
+;; Summary List Buffer Commands:
+;; RET      - Open
+;; !        - Flag
+;; M-u      - Unflag
+;; #        - Mark
+;; M-#      - Unmark
+;; B-DEL    - Remove (Also removes anything marked with #)
+;; n/p      - Next/Previous unread
+;; F/f      - Follow-up (with/without cite)
+;; R/r      - Reply (with/without cite)
+;; m        - Create
+;; S-m S-c  - Mark all as read
+;; M-g      - Update buffer (rescan)
+;;
+;; Email Buffer Commands:
+;; C-c C-c    - Send
+;; C-c C-d    - Save draft
+;; C-c C-k    - Kill
+;; C-c C-m f  - Attach file
+;; 
+;; Tech Support: C-h i gnus
+;; 
 ;; Enjoy!
 
 (setq user-mail-address "YOUR_EMAIL@gmail.com") 
