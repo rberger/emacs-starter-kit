@@ -1,3 +1,6 @@
 [submodule "vendor/swank-clojure"]
 	path = vendor/swank-clojure
 	url = git://github.com/jochu/swank-clojure.git
+[submodule "vendor/rspec-mode"]
+	path = vendor/rspec-mode
+	url = git://github.com/patmaddox/rspec-mode.el.git
