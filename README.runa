@@ -34,11 +34,12 @@ Then, you can create your link like so:
           magit
           rinari
           swank-clojure
+          yasnippet-bundle
           
+        Note: It is not required to install paredit here.
           
 
-
-3) Refresh all submodules
+4) Refresh all submodules
 
 You must refresh all submodules and nested submodules:
 
