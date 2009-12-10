@@ -54,7 +54,7 @@
 (load (concat *VENDOR-ROOT* "/mudphone/eshell-customizations.el"))
 
 ;; Show Parens
-(show-paren-mode)
+(show-paren-mode +1)
 
 ;; Custom Keybindings
 (load (concat *VENDOR-ROOT* "/mudphone/custom_keybindings.el"))
