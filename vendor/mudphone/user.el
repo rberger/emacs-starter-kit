@@ -10,50 +10,49 @@
 ;;----------------------------------------
 ;; - comment line out if not required
 (setq *EXTRA-SWANK-CLASSPATH-FILE-PATH* (concat *VENDOR-ROOT* "/mudphone/extra_classpaths.el"))
-(setq *SWANK-CLOJURE-JAR-PATH* (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
 (setq *CUSTOM-SETTINGS-PATH* (concat *VENDOR-ROOT* "/mudphone/mudphone.el"))
-
-;;----------------------------------------
-;; clojure-mode
-;;----------------------------------------
-;; (add-to-list 'load-path (concat *VENDOR-ROOT* "/clojure-mode"))
-;; (require 'clojure-mode)
 
 ;;----------------------------------------
 ;; swank-clojure
 ;;----------------------------------------
-;; basic swank classpath setup
-(setq *DOT-CLOJURE-PATH* "~/.clojure")
-(if (file-accessible-directory-p *DOT-CLOJURE-PATH*)
-    (setq extra-classpaths (directory-files *DOT-CLOJURE-PATH* t "\\.jar$"))
-  (setq extra-classpaths '()))
+(setq extra-classpaths '())
 (defun add-to-extra-classpath (entry)
+  "Used by runa/runa.el and mudphone/extra_classpaths.el"
   (add-to-list 'extra-classpaths entry))
 
-;; load runa classes for swank
+;; Add Runa and personal stuff to swank clojure classpath:
 (load (concat *VENDOR-ROOT* "/runa/runa.el"))
-;; load personal classes for swank
 (if (boundp '*EXTRA-SWANK-CLASSPATH-FILE-PATH*)
     (load *EXTRA-SWANK-CLASSPATH-FILE-PATH*))
 
+;; This wouldn't be necessary if we were using swank-clojure-project
+;; properly.  In the meantime, I'm fairly certain that local
+;; lib clojure.jar and swank-clojure.jar files are picked up
+;; in preference to what's here when suing swank-clojure-project.
+(setq swank-clojure-jars '())
+(add-to-list 'swank-clojure-jars (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
+(add-to-list 'swank-clojure-jars (concat *USER-ROOT* "/.swank-clojure/swank-clojure.jar"))
+(setq swank-clojure-classpath (append swank-clojure-jars extra-classpaths))
+
+
 ;; swank-clojure --
 ;; KEEP THIS until you properly configure Swank-Clojure ... :{
-(add-to-list 'load-path (concat *VENDOR-ROOT* "/swank-clojure"))
-(require 'swank-clojure-autoload)
-(swank-clojure-config
- (if (boundp '*SWANK-CLOJURE-JAR-PATH*)
-     (setq swank-clojure-jar-path *SWANK-CLOJURE-JAR-PATH*))
- (setq swank-clojure-extra-classpaths extra-classpaths))
+;;;;;; BEGIN
+;; (setq *SWANK-CLOJURE-JAR-PATH* (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
+;;
+;; basic swank classpath setup
+;; (setq *DOT-CLOJURE-PATH* "~/.clojure")
+;; (if (file-accessible-directory-p *DOT-CLOJURE-PATH*)
+;;     (setq extra-classpaths (directory-files *DOT-CLOJURE-PATH* t "\\.jar$"))
+;;   (setq extra-classpaths '()))
 
-
-;;----------------------------------------
-;; slime
-;;----------------------------------------
-;;(eval-after-load "slime"
-;;  '(progn (slime-setup '(slime-repl))))
-;;(add-to-list 'load-path (concat *VENDOR-ROOT* "/slime"))
-;;(require 'slime)
-;;(slime-setup)
+;; (add-to-list 'load-path (concat *VENDOR-ROOT* "/swank-clojure"))
+;; (require 'swank-clojure-autoload)
+;; (swank-clojure-config
+;;  (if (boundp '*SWANK-CLOJURE-JAR-PATH*)
+;;      (setq swank-clojure-jar-path *SWANK-CLOJURE-JAR-PATH*))
+;;  (setq swank-clojure-extra-classpaths extra-classpaths))
+;;;;;; END
 
 ;;----------------------------------------
 ;; other
