@@ -52,11 +52,11 @@ See README_orig.markdown for the basics.  Or, checkout the
 
 4. Refresh all submodules
 
-   You must refresh all submodules:
+     You must refresh all submodules:
 
-       $ cd ~/.emacs.d
-       $ git submodule init
-       $ git submodule update
+         $ cd ~/.emacs.d
+         $ git submodule init
+         $ git submodule update
 
 
 ## Feature Highlights
@@ -83,7 +83,8 @@ See README_orig.markdown for the basics.  Or, checkout the
         (define-key map [(meta return)] 'textmate-next-line)
         (define-key map [(control tab)] 'textmate-shift-right)
         (define-key map [(control shift tab)] 'textmate-shift-left)
-        (define-key map [(control meta \;)] 'comment-or-uncomment-region-or-line)
+        (define-key map [(control meta \;)]
+                        'comment-or-uncomment-region-or-line)
         (define-key map [(meta t)] 'textmate-goto-file)
 
 ### TODO
@@ -91,15 +92,15 @@ See README_orig.markdown for the basics.  Or, checkout the
 #### Instructions for using customizations:
 
 ##### ERC:
-      * .authinfo.template
-      * .erc-auth.
-      * ercrc.el
+  * .authinfo.template
+  * .erc-auth.
+  * ercrc.el
 
 ##### EShell:
-      * eshell-customizations.el
+  * eshell-customizations.el
 
 ##### Gnus (for Gmail):
-      * .gnus.el.template
+  * .gnus.el.template
 
 #### In the meantime, check the comments at the top of these files for info.
 
