@@ -86,15 +86,15 @@ You must refresh all submodules:
 
 - Instructions for using customizations:
   1. ERC:
-     * .authinfo.template
-     * .erc-auth.template
-     * ercrc.el
+  * .authinfo.template
+  * .erc-auth.template
+  * ercrc.el
 
   2. EShell:
-     * eshell-customizations.el
+  * eshell-customizations.el
 
   3. Gnus (for Gmail):
-     * .gnus.el.template
+  * .gnus.el.template
 
 - In the meantime, check the comments at the top of these files for info.
 
