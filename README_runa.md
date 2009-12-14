@@ -84,19 +84,19 @@ You must refresh all submodules:
 
 ### TODO
 
-- Instructions for using customizations:
-  1. ERC:
-  * .authinfo.template
-  * .erc-auth.template
-  * ercrc.el
+#### Instructions for using customizations:
+##### ERC:
+      * .authinfo.template
+      * .erc-auth.
+      * ercrc.el
 
-  2. EShell:
-  * eshell-customizations.el
+##### EShell:
+      * eshell-customizations.el
 
-  3. Gnus (for Gmail):
-  * .gnus.el.template
+##### Gnus (for Gmail):
+      * .gnus.el.template
 
-- In the meantime, check the comments at the top of these files for info.
+#### In the meantime, check the comments at the top of these files for info.
 
 
 Happy hacking!!!
