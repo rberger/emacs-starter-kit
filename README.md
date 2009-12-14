@@ -3,31 +3,31 @@
 This is Mudphone's RUNA fork of the Emacs Starter Kit (by Technomancy).
 See README_orig.markdown for the basics.  Or, checkout the
   [original project page](http://github.com/technomancy/emacs-starter-kit
-  "Technomancy's Emacs Starter Kit on Github")
+  "Technomancy's Emacs Starter Kit on Github").
 
 
 ## Installation
 
 1. Clone or fork this project.
 
-   Forking is easier, as it will automatically create a github project for you
-   (and you'll show up in the network graph).
+     Forking is easier, as it will automatically create a github project for you
+     (and you'll show up in the network graph).
 
 
 2. Create a .emacs.d link to this project.
 
-   For example, if you forked and cloned the project as:
+     For example, if you forked and cloned the project as:
 
-     $ cd ~/work/emacs
-     $ git clone git://github.com/<your user name>/emacs-starter-kit.git
+         $ cd ~/work/emacs
+         $ git clone git://github.com/<your user name>/emacs-starter-kit.git
 
-   If you already have a .emacs.d directory, you should rename it
-   (unless you don't want it any more).
+     If you already have a .emacs.d directory, you should rename it
+     (unless you don't want it any more).
 
-   Then, you can create your link like so:
+     Then, you can create your link like so:
 
-     $ cd ~/.
-     $ ln -s ~/work/emacs/emacs-starter-kit .emacs.d
+         $ cd ~/.
+         $ ln -s ~/work/emacs/emacs-starter-kit .emacs.d
 
 
 3. Update ELPA Packages
@@ -66,8 +66,8 @@ See README_orig.markdown for the basics.  Or, checkout the
 - RSpec-Mode: vendor/rspec-mode (submodule)
   allows for single spec or whole file spec running
 
-      (define-key map (kbd "\C-c s") 'run-specs)
-      (define-key map (kbd "\C-c f") 'run-focused-spec)
+        (define-key map (kbd "\C-c s") 'run-specs)
+        (define-key map (kbd "\C-c f") 'run-focused-spec)
 
 ### MUDPHONE'S CUSTOMIZATIONS
 
@@ -80,11 +80,11 @@ See README_orig.markdown for the basics.  Or, checkout the
 - Textmate: vendor/mudphone/textmate.el
   several Textmate feature emulations
 
-      (define-key map [(meta return)] 'textmate-next-line)
-      (define-key map [(control tab)] 'textmate-shift-right)
-      (define-key map [(control shift tab)] 'textmate-shift-left)
-      (define-key map [(control meta \;)] 'comment-or-uncomment-region-or-line)
-      (define-key map [(meta t)] 'textmate-goto-file)
+        (define-key map [(meta return)] 'textmate-next-line)
+        (define-key map [(control tab)] 'textmate-shift-right)
+        (define-key map [(control shift tab)] 'textmate-shift-left)
+        (define-key map [(control meta \;)] 'comment-or-uncomment-region-or-line)
+        (define-key map [(meta t)] 'textmate-goto-file)
 
 ### TODO
 
