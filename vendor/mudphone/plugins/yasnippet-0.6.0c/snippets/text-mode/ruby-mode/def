@@ -1,7 +1,0 @@
-#name : def ... end
-#contributor : mudphone <kyleoba@gmail.com>
-#group : definitions
-# --
-def ${method_name}
-  $0
-end

@@ -1,22 +1,24 @@
-# My Fork
+# My Fork of the Emacs Starter Kit
 
 This is Mudphone's RUNA fork of the Emacs Starter Kit (by Technomancy).
 
-# Installation
+## Installation
 
-1) Clone or fork this project.
+1. Clone or fork this project.
 
-Forking is easier, as it will automatically create a github project for you (and you'll show up in the network graph).
+Forking is easier, as it will automatically create a github project for you
+(and you'll show up in the network graph).
 
 
-2) Create a .emacs.d link to this project.
+2. Create a .emacs.d link to this project.
 
 For example, if you forked and cloned the project as:
 
   $ cd ~/work/emacs
   $ git clone git://github.com/<your user name>/emacs-starter-kit.git
 
-If you already have a .emacs.d directory, you should rename it (unless you don't want it any more).
+If you already have a .emacs.d directory, you should rename it
+(unless you don't want it any more).
 
 Then, you can create your link like so:
 
@@ -24,50 +26,46 @@ Then, you can create your link like so:
   $ ln -s ~/work/emacs/emacs-starter-kit .emacs.d
 
 
-3) Update ELPA Packages
+3. Update ELPA Packages
 
   M-x package-list-packages
   i - next to each package you want
-        
-        Recommended non-default packages:
-          clojure-mode
-          magit
-          rinari
-          swank-clojure
-          yasnippet-bundle
-          
-        Note: It is not required to install paredit here.
-          
 
-4) Refresh all submodules
+    * Recommended non-default packages:
+      - clojure-mode
+      - clojure-test-mode
+      - magit
+      - rinari
+      - yasnippet-bundle
 
-You must refresh all submodules and nested submodules:
+    * Automatically installed by the above modes:
+      - slime
+      - slime-repl
+      - swank-clojure
+
+    * Note: It is not required to install paredit here.
+
+
+4. Refresh all submodules
+
+You must refresh all submodules:
 
   $ cd ~/.emacs.d
   $ git submodule init
   $ git submodule update
 
 
-# Feature Highlights
+## Feature Highlights
 
-SUBMODULES
-
-- Rinari: vendor/rinari (submodule) 
-  (ruby/rails) tools
-
-- Magit: vendor/magit (submodule)
-  for in-Emacs work with Git
+### SUBMODULES
 
 - RSpec-Mode: vendor/rspec-mode (submodule)
   allows for single spec or whole file spec running
-    
+
     (define-key map (kbd "\C-c s") 'run-specs)
     (define-key map (kbd "\C-c f") 'run-focused-spec)
 
-MUDPHONE'S CUSTOMIZATIONS
-
-- javascript.el: vendor/mudphone/javascript.el
-  customized javascript settings (especially 2 char tabs)
+### MUDPHONE'S CUSTOMIZATIONS
 
 - Runa: vendor/mudphone/runa.el
   customized RUNA keyword syntax highlighting
@@ -77,22 +75,29 @@ MUDPHONE'S CUSTOMIZATIONS
 
 - Textmate: vendor/mudphone/textmate.el
   several Textmate feature emulations
-  
+
     (define-key map [(meta return)] 'textmate-next-line)
     (define-key map [(control tab)] 'textmate-shift-right)
     (define-key map [(control shift tab)] 'textmate-shift-left)
     (define-key map [(control meta \;)] 'comment-or-uncomment-region-or-line)
     (define-key map [(meta t)] 'textmate-goto-file)
 
-PLUGINS
+### TODO
 
-- YetAnotherSnippet: plugins/yasnippet
-  Textmate-like custom snippets
+- Instructions for using customizations:
+  1. ERC:
+     * .authinfo.template
+     * .erc-auth.template
+     * ercrc.el
 
-OTHER
+  2. EShell:
+     * eshell-customizations.el
 
-- NXHTML: vendor/nxhtml 
-  for xhtml editing
+  3. Gnus (for Gmail):
+     * .gnus.el.template
+
+- In the meantime, check the comments at the top of these files for info.
+
 
 Happy hacking!!!
 

@@ -1,7 +1,0 @@
-#name : context ... end
-#contributor : mudphone <kyleoba@gmail.com>
-#group : definitions
-# --
-context "${context_description}" do
-  $0
-end
