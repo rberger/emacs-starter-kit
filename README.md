@@ -64,28 +64,28 @@ See README_orig.markdown for the basics.  Or, checkout the
 ### SUBMODULES
 
 - RSpec-Mode: vendor/rspec-mode (submodule)
-  allows for single spec or whole file spec running
+    allows for single spec or whole file spec running
 
-        (define-key map (kbd "\C-c s") 'run-specs)
-        (define-key map (kbd "\C-c f") 'run-focused-spec)
+          (define-key map (kbd "\C-c s") 'run-specs)
+          (define-key map (kbd "\C-c f") 'run-focused-spec)
 
 ### MUDPHONE'S CUSTOMIZATIONS
 
 - Runa: vendor/mudphone/runa.el
-  customized RUNA keyword syntax highlighting
+    customized RUNA keyword syntax highlighting
 
 - Maxframe: vendor/mudphone/maxframe.el
-  maximizes emacs frame on start-up
+    maximizes emacs frame on start-up
 
 - Textmate: vendor/mudphone/textmate.el
-  several Textmate feature emulations
+    several Textmate feature emulations
 
-        (define-key map [(meta return)] 'textmate-next-line)
-        (define-key map [(control tab)] 'textmate-shift-right)
-        (define-key map [(control shift tab)] 'textmate-shift-left)
-        (define-key map [(control meta \;)]
-                        'comment-or-uncomment-region-or-line)
-        (define-key map [(meta t)] 'textmate-goto-file)
+          (define-key map [(meta return)] 'textmate-next-line)
+          (define-key map [(control tab)] 'textmate-shift-right)
+          (define-key map [(control shift tab)] 'textmate-shift-left)
+          (define-key map [(control meta \;)]
+                          'comment-or-uncomment-region-or-line)
+          (define-key map [(meta t)] 'textmate-goto-file)
 
 ### TODO
 
