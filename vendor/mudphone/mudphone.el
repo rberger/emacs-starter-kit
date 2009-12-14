@@ -1,6 +1,28 @@
 ;; Add to load-path:
 (add-to-list 'load-path (concat *VENDOR-ROOT* "/mudphone"))
 
+;; turn off advertisements
+(setq inhibit-startup-screen t)
+
+;; i <3 destroy white-space
+(setq-default indent-tabs-mode nil)
+(setq whitespace-style '(tabs trailing lines)
+      whitespace-line-column 80
+      line-number-mode t
+      column-number-mode t)
+(global-whitespace-mode t)
+
+;; quickly cleanup code buffers
+(defun cleanup ()
+  (interactive)
+  (untabify (point-min) (point-max))
+  (indent-region (point-min) (point-max))
+  (delete-trailing-whitespace))
+(global-set-key (kbd "C-c n") 'cleanup)
+
+;; use 'y' and 'n'
+(defalias 'yes-or-no-p 'y-or-n-p)
+
 ;; Maxframe - Maximizes the Emacs frame on start.
 (load (concat *VENDOR-ROOT* "/mudphone/maxframe.el"))
 (require 'maxframe)
@@ -21,10 +43,6 @@
 ;; (autoload 'javascript-mode "javascript" nil t)
 ;; (load (concat *VENDOR-ROOT* "/mudphone/mudphone_javascript.el"))
 
-;; Magit
-;;(load (concat *VENDOR-ROOT* "/magit/magit.el"))
-;;(require 'magit)
-
 ;; Windmove - Allows <shift>-<arrow key> window changing.
 (windmove-default-keybindings)
 (setq windmove-wrap-around t)
@@ -37,7 +55,6 @@
   (defun x-cut-buffer-or-selection-value ()))
 
 ;; Textmate minor mode
-(add-to-list 'load-path (concat *VENDOR-ROOT* "/textmate.el"))
 (require 'textmate)
 (textmate-mode)
 

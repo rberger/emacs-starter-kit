@@ -9,7 +9,8 @@
 ;; customizations
 ;;----------------------------------------
 ;; - comment line out if not required
-(setq *EXTRA-SWANK-CLASSPATH-FILE-PATH* (concat *VENDOR-ROOT* "/mudphone/extra_classpaths.el"))
+(setq *EXTRA-SWANK-CLASSPATH-FILE-PATH*
+      (concat *VENDOR-ROOT* "/mudphone/extra_classpaths.el"))
 (setq *CUSTOM-SETTINGS-PATH* (concat *VENDOR-ROOT* "/mudphone/mudphone.el"))
 
 ;;----------------------------------------
@@ -30,15 +31,18 @@
 ;; lib clojure.jar and swank-clojure.jar files are picked up
 ;; in preference to what's here when suing swank-clojure-project.
 (setq swank-clojure-jars '())
-(add-to-list 'swank-clojure-jars (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
-(add-to-list 'swank-clojure-jars (concat *USER-ROOT* "/.swank-clojure/swank-clojure.jar"))
+(add-to-list 'swank-clojure-jars
+             (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
+(add-to-list 'swank-clojure-jars
+             (concat *USER-ROOT* "/.swank-clojure/swank-clojure.jar"))
 (setq swank-clojure-classpath (append swank-clojure-jars extra-classpaths))
 
 
 ;; swank-clojure --
 ;; KEEP THIS until you properly configure Swank-Clojure ... :{
 ;;;;;; BEGIN
-;; (setq *SWANK-CLOJURE-JAR-PATH* (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
+;; (setq *SWANK-CLOJURE-JAR-PATH*
+;;       (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
 ;;
 ;; basic swank classpath setup
 ;; (setq *DOT-CLOJURE-PATH* "~/.clojure")
@@ -70,10 +74,10 @@
 
 ;; This is all probably only used by Carbon.
 (custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
  '(ido-mode (quote both) nil (ido))
  '(blink-cursor-mode t)
  '(debug-on-error t)
