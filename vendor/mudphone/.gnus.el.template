@@ -4,17 +4,18 @@
 ;; 3) Copy .authinfo.template to ~/.emacs.d/.authinfo
 ;; 4) Update ~/.emacs.d/.authinfo with your email address and password
 ;; 5) If you want to send emails, make sure you have:
-;;   a) gnutls installed via macports if you're on a mac (see starttls-gnutls-program below)
+;;   a) gnutls installed via macports if you're on a mac
+;;      (see starttls-gnutls-program below)
 ;;   b) or, starttls or gnutls installed some other way
 ;;
 ;; Helpful Gnus stuff:
 ;; 1) Launch Gnus with: M-x gnus, or C-c g
 ;; 2) Here some helpful cheatsheets:
 ;; - http://www.emacswiki.org/emacs/GnusGmail
-;; - http://codesnippets.joyent.com/posts/show/367
+;; -Cn http://codesnippets.joyent.com/posts/show/367
 ;; - http://www.stat.ufl.edu/~presnell/Links/gnus-brief.org
 ;; - http://dallaslynn.com/refcards/refcard.pdf
-;; - http://jfm3-repl.blogspot.com/2007/12/emacs-tricks-7-use-gnus-for-email.html
+;;- http://jfm3-repl.blogspot.com/2007/12/emacs-tricks-7-use-gnus-for-email.html
 ;;
 ;; To subscribe to your INBOX:
 ;; 1) from Gnus, hit S-s
@@ -43,12 +44,12 @@
 ;; C-c C-d    - Save draft
 ;; C-c C-k    - Kill
 ;; C-c C-m f  - Attach file
-;; 
+;;
 ;; Tech Support: C-h i gnus
-;; 
+;;
 ;; Enjoy!
 
-(setq user-mail-address "YOUR_EMAIL@gmail.com") 
+(setq user-mail-address "YOUR_EMAIL@gmail.com")
 (setq user-full-name "YOUR_NAME YOUR_LAST_NAME")
 
 (setq gnus-select-method '(nnimap "gmail"
