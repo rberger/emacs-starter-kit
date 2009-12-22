@@ -56,7 +56,7 @@
 
 ;; Textmate minor mode
 (require 'textmate)
-(textmate-mode)
+(textmate-mode +1)
 
 ;; Paredit
 ;; enable paredit in slime repl
@@ -70,8 +70,9 @@
 ;; EShell
 (load (concat *VENDOR-ROOT* "/mudphone/eshell-customizations.el"))
 
-;; Show Parens
+;; Turn on mah modes:
 (show-paren-mode +1)
+(cua-mode +1)
 
 ;; Custom Keybindings
 (load (concat *VENDOR-ROOT* "/mudphone/custom_keybindings.el"))
