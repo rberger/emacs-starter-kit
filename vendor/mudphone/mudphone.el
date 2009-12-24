@@ -70,9 +70,12 @@
 ;; EShell
 (load (concat *VENDOR-ROOT* "/mudphone/eshell-customizations.el"))
 
-;; Turn on mah modes:
+;; Show Parens:
 (show-paren-mode +1)
+
+;; CUA sort of:
 (cua-mode +1)
+(setq cua-enable-cua-keys nil)
 
 ;; Custom Keybindings
 (load (concat *VENDOR-ROOT* "/mudphone/custom_keybindings.el"))
