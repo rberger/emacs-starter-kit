@@ -24,7 +24,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Maxframe - Maximizes the Emacs frame on start.
-(load (concat *VENDOR-ROOT* "/mudphone/maxframe.el"))
+;;(load (concat *VENDOR-ROOT* "/mudphone/maxframe.el"))
 (require 'maxframe)
 (add-hook 'window-setup-hook 'maximize-frame t)
 
@@ -35,7 +35,7 @@
 ;;(yas/load-directory "~/.emacs.d/plugins/yasnippet/snippets")
 
 ;; Add Mudphone Ruby/Rails settings (Do this after YASnippet):
-(load (concat *VENDOR-ROOT* "/mudphone/mudphone_ruby.el"))
+;;(load (concat *VENDOR-ROOT* "/mudphone/mudphone_ruby.el"))
 
 ;; Javascript
 ;; (load "~/.emacs.d/vendor/mudphone/javascript.el")
@@ -68,7 +68,7 @@
     (load (concat *VENDOR-ROOT* "/mudphone/ercrc.el")))
 
 ;; EShell
-(load (concat *VENDOR-ROOT* "/mudphone/eshell-customizations.el"))
+;;(load (concat *VENDOR-ROOT* "/mudphone/eshell-customizations.el"))
 
 ;; Show Parens:
 (show-paren-mode +1)
@@ -78,4 +78,4 @@
 (setq cua-enable-cua-keys nil)
 
 ;; Custom Keybindings
-(load (concat *VENDOR-ROOT* "/mudphone/custom_keybindings.el"))
+;;(load (concat *VENDOR-ROOT* "/mudphone/custom_keybindings.el"))

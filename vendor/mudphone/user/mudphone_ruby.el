@@ -1,4 +1,7 @@
 ;; For Rails / Ruby
+;; C-c C-s  ;; => open IRB in buffer
+;; C-c s    ;; => run specs from buffer
+;; C-c f    ;; => run focused spec
 
 ;; Interactively Do Things (highly recommended, but not strictly required)
 ;;;;; ido stuff
@@ -27,5 +30,5 @@
 ;(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
 
 ;; RSpec
-(load "~/.emacs.d/vendor/rspec-mode/linkify.el")
-(load "~/.emacs.d/vendor/rspec-mode/rspec-mode.el")
+;;(load "~/.emacs.d/vendor/rspec-mode/linkify.el")
+;;(load "~/.emacs.d/vendor/rspec-mode/rspec-mode.el")
