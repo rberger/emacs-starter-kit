@@ -1,0 +1,61 @@
+# setup
+Install bitlbee.  If on mac, you can use macports.
+
+Make sure you load bitlbee.el
+I do this by putting it in .emacs.d/<user>
+
+# start bitlbee
+M-x bitlbee-start
+
+# use ERC to connect
+M-x erc
+Then, enter...
+  host: localhost
+  port: 6667
+  and your user and password
+
+# register your user:
+register <password>
+
+# after you are registered, then next time you connect you can get your settings back:
+identify <password>
+
+# add a gmail account to your list:
+account add jabber <user>@gmail.com <password> talk.google.com:5223:ssl
+
+# Warning: Passing a servername/other flags to `account add' is now
+         deprecated. Use `account set' instead.
+
+# add yahoo account:
+account add yahoo <user> <password>
+Note: no need for @yahoo.com (in fact you'll get an error if you use it)
+
+# for a list of accounts you have set up:
+account list
+
+# to connect with one account only:
+account on <num>
+
+# to connect to all accounts:
+account on
+
+# to delete an account: 
+account del <num>
+
+# save your settings:
+save
+
+# for help
+help
+
+# other helpful things
+## full listing of users
+/WHO 
+
+## start a chat with user
+/QUERY <user>
+
+# notes:
+http://thinkhole.org/wp/2006/09/20/howto-connect-to-google-talk-with-bitlbee/
+http://freshmeat.net/articles/bitlbee-irc-vs-instant-messengers
+http://www.bitlbee.org/main.php/irchacks_bitlbee.html

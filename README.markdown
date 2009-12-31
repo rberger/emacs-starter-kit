@@ -71,13 +71,19 @@ allows for single spec or whole file spec running
 
 ### MUDPHONE'S CUSTOMIZATIONS
 
-1. Runa: vendor/mudphone/runa.el
+1. Personal: vendor/mudpone/user.el
+   I create a symlink to my custom configs from .emacs.d/<username>.el
+
+2. Personal: vendor/mudphone/user
+   I create a symlink to my custom load dir from .emacs.d/<username>
+
+3. Runa: vendor/mudphone/runa.el
    customized RUNA keyword syntax highlighting
 
-2. Maxframe: vendor/mudphone/maxframe.el
+4. Maxframe: vendor/mudphone/maxframe.el
    maximizes emacs frame on start-up
 
-3. Textmate: vendor/mudphone/textmate.el
+5. Textmate: vendor/mudphone/textmate.el
    several Textmate feature emulations
 
           (define-key map [(meta return)] 'textmate-next-line)
