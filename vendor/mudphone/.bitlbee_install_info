@@ -1,8 +1,12 @@
 # setup
 Install bitlbee.  If on mac, you can use macports.
+I also had to create a link from /bin/bitlbee to
+  /opt/local/etc/bitlbee/bitlbee.conf.sample
 
 Make sure you load bitlbee.el
 I do this by putting it in .emacs.d/<user>
+
+Link to ~/.emacs.d/vendor/mudphone/bitlbee.conf from ~/.bitlbee/bitlbee.conf
 
 # start bitlbee
 M-x bitlbee-start
@@ -15,45 +19,52 @@ Then, enter...
   and your user and password
 
 # register your user:
-register <password>
+ERC> register <password>
 
-# after you are registered, then next time you connect you can get your settings back:
-identify <password>
+# after you are registered, then next time you connect
+#   you can get your settings back:
+ERC> identify <password>
 
 # add a gmail account to your list:
-account add jabber <user>@gmail.com <password> talk.google.com:5223:ssl
+ERC> account add jabber <user>@gmail.com <password> talk.google.com:5223:ssl
 
+You may get this warning... someone in the world probably knows
+  what to do about it...
 # Warning: Passing a servername/other flags to `account add' is now
          deprecated. Use `account set' instead.
 
 # add yahoo account:
-account add yahoo <user> <password>
+ERC> account add yahoo <user> <password>
 Note: no need for @yahoo.com (in fact you'll get an error if you use it)
 
 # for a list of accounts you have set up:
-account list
+ERC> account list
 
 # to connect with one account only:
-account on <num>
+ERC> account on <num>
 
 # to connect to all accounts:
-account on
+ERC> account on
 
-# to delete an account: 
-account del <num>
+# to delete an account:
+ERC> account del <num>
 
 # save your settings:
-save
+ERC> save
 
 # for help
-help
+ERC> help
 
 # other helpful things
 ## full listing of users
-/WHO 
+ERC> /WHO
 
 ## start a chat with user
-/QUERY <user>
+ERC> /QUERY <user>
+
+## Others:
+/whois
+/names
 
 # notes:
 http://thinkhole.org/wp/2006/09/20/howto-connect-to-google-talk-with-bitlbee/
