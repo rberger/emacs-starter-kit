@@ -17,5 +17,15 @@
   (if (get-buffer "irc.freenode.net:6667") ;; ERC already active?
     (erc-track-switch-buffer 1) ;; yes: switch to last active
     (when (y-or-n-p "Start ERC? ") ;; no: maybe start ERC
-      (erc :server "irc.freenode.net" :port 6667 :nick freenode-nick :full-name freenode-full-name :password freenode-pass))))
+      (erc :server "irc.freenode.net"
+           :port 6667
+           :nick freenode-nick
+           :full-name freenode-full-name
+           :password freenode-pass)
+      (bitlbee-start)
+      (erc :server "localhost"
+           :port 6667
+           :nick freenode-nick
+           :full-name freenode-full-name
+           :password freenode-pass))))
 (global-set-key (kbd "C-c i") 'erc-start-or-switch) ;; ERC
