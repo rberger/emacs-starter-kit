@@ -59,12 +59,13 @@ ERC> help
 ## full listing of users
 ERC> /WHO
 
-## start a chat with user
+## start a chat with user in separate buffer
 ERC> /QUERY <user>
 
 ## Others:
-/whois
-/names
+/whois <user>  # => gives status and network of a user
+/names         # => list connected users
+<first letter(s) of user name><tab>  # => will complete the user name
 
 # notes:
 http://thinkhole.org/wp/2006/09/20/howto-connect-to-google-talk-with-bitlbee/
