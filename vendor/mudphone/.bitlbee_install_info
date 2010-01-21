@@ -1,7 +1,7 @@
 # setup
 Install bitlbee.  If on mac, you can use macports.
-I also had to create a link from /bin/bitlbee to
-  /opt/local/etc/bitlbee/bitlbee.conf.sample
+You will be asked to cp the basic config:
+    $ sudo cp /opt/local/etc/bitlbee/bitlbee.conf.sample /opt/local/etc/bitlbee/bitlbee.conf
 
 Make sure you load bitlbee.el
 I do this by putting it in .emacs.d/<user>
