@@ -15,6 +15,7 @@ loaddefs.el*
 backups/*
 auto-save-list
 custom.el
+desktop/*
 *elc
 places
 url/cookies
