@@ -37,27 +37,6 @@
              (concat *USER-ROOT* "/.swank-clojure/swank-clojure.jar"))
 (setq swank-clojure-classpath (append swank-clojure-jars extra-classpaths))
 
-
-;; swank-clojure --
-;; KEEP THIS until you properly configure Swank-Clojure ... :{
-;;;;;; BEGIN
-;; (setq *SWANK-CLOJURE-JAR-PATH*
-;;       (concat *WORK-ROOT* "/runa/furtive/lib/java/clojure.jar"))
-;;
-;; basic swank classpath setup
-;; (setq *DOT-CLOJURE-PATH* "~/.clojure")
-;; (if (file-accessible-directory-p *DOT-CLOJURE-PATH*)
-;;     (setq extra-classpaths (directory-files *DOT-CLOJURE-PATH* t "\\.jar$"))
-;;   (setq extra-classpaths '()))
-
-;; (add-to-list 'load-path (concat *VENDOR-ROOT* "/swank-clojure"))
-;; (require 'swank-clojure-autoload)
-;; (swank-clojure-config
-;;  (if (boundp '*SWANK-CLOJURE-JAR-PATH*)
-;;      (setq swank-clojure-jar-path *SWANK-CLOJURE-JAR-PATH*))
-;;  (setq swank-clojure-extra-classpaths extra-classpaths))
-;;;;;; END
-
 ;;----------------------------------------
 ;; other
 ;;----------------------------------------

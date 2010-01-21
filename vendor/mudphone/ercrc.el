@@ -23,9 +23,10 @@
            :full-name freenode-full-name
            :password freenode-pass)
       (bitlbee-start)
-      (erc :server "localhost"
-           :port 6667
-           :nick freenode-nick
-           :full-name freenode-full-name
-           :password freenode-pass))))
+      (run-at-time "1 sec" nil 'erc
+                   :server "localhost"
+                   :port 6667
+                   :nick freenode-nick
+                   :full-name freenode-full-name
+                   :password freenode-pass))))
 (global-set-key (kbd "C-c i") 'erc-start-or-switch) ;; ERC

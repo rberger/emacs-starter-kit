@@ -8,15 +8,25 @@ I do this by putting it in .emacs.d/<user>
 
 Link to ~/.emacs.d/vendor/mudphone/bitlbee.conf from ~/.bitlbee/bitlbee.conf
 
-# start bitlbee
+If you already have bitlbee on another machine, you can copy your 
+~/.bitlbee/<user>.xml file.  This will allow you to port your account info.
+
+# First time:
+
+## start bitlbee
 M-x bitlbee-start
 
-# use ERC to connect
+## use ERC to connect
 M-x erc
 Then, enter...
   host: localhost
   port: 6667
   and your user and password
+
+# After the first time:
+
+## You can start with this (if you're using my keybindings):
+    C-c i
 
 # register your user:
 ERC> register <password>
